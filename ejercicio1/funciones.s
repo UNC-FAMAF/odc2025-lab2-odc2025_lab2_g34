@@ -91,16 +91,18 @@ circulo:
 		
 	bienbien:
 		add x21, x4, x4				// r+r = diametro    osea el largo de la fila del cuadrado que contiene al circulo
-		mov x22, x21				// largo del diametro para el reset
-		mov x23, x10				// x inicial
-		mov x24, x11				// y inicial
+		mov x22, x21				// largo de filas restantes
+		mov x26, x22				// para reiniciar x21 
+		mov x23, x10				// x inicial (que se va modificando)
+		mov x24, x11				// y inicial (que se va modificando)
 		
 
 loop_y: 
 	cbz x22, end_circulo				// cuando x22 = 0 entonces no hay mas filas, plt se termino el circulo
 	mov x23, x10					// reset x inicial al inicio de la fila
-	mov x21, x22					// reset largo del diametro
-					// creo q mov x21, x22 esta mal 
+	mov x21, x26					// reset largo del diametro
+
+					
 	loop_x:
 		cbz x21, next_fila			// terminamos la fila actual	
 		
@@ -116,7 +118,7 @@ loop_y:
 		bl pintar_pixel				// si esta adentro
 
 next_pixel:
-	add x23, x23, #1				// siguiente x osea columna
+	add x23, x23, #1				// siguiente x osea columna de la fila actual
 	sub x21, x21, #1				// decrementar el contador de columna de la fila actual
 	b loop_x
 	
