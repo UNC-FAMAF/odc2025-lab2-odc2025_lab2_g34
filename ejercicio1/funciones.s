@@ -52,4 +52,104 @@ loop_filas:
 ret 
 
 
+	//hacer un cuadrado que encierre al circulo, osea el ancho del cuadrado es el diametro del circulo (radio*2)
+	// el proceso seria con el centro calcular la posicion con calcular_dir_pixel, despues calcular la distancia
+	// (x5-x10)²+(x6-x11)² <= r² 
+	// x10 = x5-r 
+	// x11 = x6-r 
+	// asi y (x5-r,x6-r) es arriba izq del "cuadrado que encierra al circulo"
+	// y de ahi empieza a hacer los triangulos para comparar su hipotenusa con r² (r² seria la hipotenusa de los triang q entran en el circulo)
+	
+circulo:
+	// x4 -> radio 
+	// x5 -> x
+	// x6 -> y
+	// (x5,x6) = centro del circulo
+	// x10 -> pos actual x
+	// x11 -> pos actual y
+	// x9 color
+	// x12 x13 x14 x15
+	
+	sub sp, sp, #8
+	stur x30, [sp, #0]
+	
+	subs x10, x5, x4				// x10 = x5-r
+	b.lt pos_minima_x				// si x5 < x4, osea x10 < 0 
+	b bien
+	
+	pos_minima_x:					//porq si da negativo entonces se va de la pantalla, plt ponemos la minima pos osea 0
+		sub x10, x10, x10			
+		b bien
+	
+	bien:
+		subs x11, x6, x4			// x11 = x6-r
+		b.lt pos_minima_y
+		b bienbien
+		
+	pos_minima_y:
+		sub x11, x11, x11
+		
+	bienbien:
+		add x21, x4, x4				// r+r = diametro    osea el largo de la fila del cuadrado que contiene al circulo
+		mov x22, x21				// largo del diametro para el reset
+		mov x23, x10				// x inicial
+		mov x24, x11				// y inicial
+		
 
+loop_y: 
+	cbz x22, end_circulo				// cuando x22 = 0 entonces no hay mas filas, plt se termino el circulo
+	mov x23, x10					// reset x inicial al inicio de la fila
+	mov x21, x22					// reset largo del diametro
+					// creo q mov x21, x22 esta mal 
+	loop_x:
+		cbz x21, next_fila			// terminamos la fila actual	
+		
+		mul x12, x4, x4				// r*r
+		sub x13, x5, x23			// xcentro - xactual
+		sub x14, x6, x24			// ycentro - yactual
+		mul x13, x13, x13				
+		mul x14, x14, x14
+		add x15, x13, x14			// (x5-x10)²+(x6-x11)²
+
+		cmp x15, x12 				// si (x5-x10)²+(x6-x11)² <= r²
+		b.gt next_pixel				// si el pixel esta afuera del circulo entonces no lo pintamos
+		bl pintar_pixel				// si esta adentro
+
+next_pixel:
+	add x23, x23, #1				// siguiente x osea columna
+	sub x21, x21, #1				// decrementar el contador de columna de la fila actual
+	b loop_x
+	
+next_fila:
+	add x24, x24, #1				// ir a la siguiente fila
+	sub x22, x22, #1				// decrementar en 1 el contador de filas
+	b loop_y
+	
+end_circulo:
+	ldur x30, [sp, #0]
+	add sp, sp, #8
+ret
+
+
+pintar_pixel:
+	// x5 -> x
+	// x6 -> y
+	// x9 color
+	
+	sub sp, sp, #32
+	stur x30, [sp, #0]
+	stur x5, [sp, #8]
+	stur x6, [sp, #16]
+	
+	mov x5, x23
+	mov x6, x24
+	
+	bl calcular_dir_pixel
+	
+	stur w9, [x0]
+	
+	ldur x6, [sp, #16]
+	ldur x5, [sp, #8]
+	ldur x30, [sp, #0]
+	add sp, sp, #32
+ret

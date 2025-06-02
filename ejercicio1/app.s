@@ -28,26 +28,24 @@ loop0:
 	cbnz x2,loop1		// Si no es la última fila, salto
 
 
-	// test cuadrado
-	mov x1, #200
-	mov x2, #100
-	mov x5, #300
-	mov x6, #200
-	movz x9, 0xEF	, lsl 16
-	movk x9, 0xEFF0	, lsl 0
-	bl cuadrado
-
-	// falta test esto
 	// y pensar q pasa cuando ponemos ancho que se pasa de pixel 639 si el cuadrado esta muy a la derecha capaz
-	mov x1, #400
+	mov x1, #100
 	mov x2, #10
 	mov x5, #50
 	mov x6, #50
 	movz x9, 0xFF	, lsl 16
 	movk x9, 0x0000	, lsl 0
 	bl cuadrado
+	
+	movz x9, 0x21	,lsl 16
+	movk x9, 0xE903	,lsl 0
+	mov x4, #40					// radio
+	mov x5, #200					// x
+	mov x6, #200					// y
+	bl circulo
 
-
+	
+	
 	// Infinite Loop
-InfLoop:
-	b InfLoop
+infloop:
+	b infloop
