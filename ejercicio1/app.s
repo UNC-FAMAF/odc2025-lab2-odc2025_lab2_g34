@@ -2,7 +2,7 @@
 	.equ SCREEN_HEIGH, 		480
 	.equ BITS_PER_PIXEL,  	32
 
-	
+
 	.include "funciones.s"
 	
 	.globl main
@@ -266,6 +266,26 @@ loop0:
 	mov x6, #260					// y
 	bl circulo
 
+
+	////// luna //////
+	
+	movz x9, 0xBA	,lsl 16
+	movk x9, 0xBABA	,lsl 0
+	mov x4, #50					// radio
+	mov x5, #530					// x
+	mov x6, #60					// y
+	bl circulo
+	
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x0000	,lsl 0
+	mov x4, #40					// radio
+	mov x5, #550					// x
+	mov x6, #65					// y
+	bl circulo
+	
+	
+	///// gotas /////
+	
 	// Infinite Loop
 infloop:
 	b infloop
