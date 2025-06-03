@@ -1,5 +1,5 @@
 	.equ SCREEN_WIDTH, 640
-	.equ SCREEN_HEIGTH, 480
+	.equ SCREEN_HEIGHT, 480
 	.equ BITS_PER_PIXEL, 32
 	
 	
@@ -7,7 +7,7 @@
 calcular_dir_pixel:
 	// x5 -> x
 	// x6 -> y
-	// x0 (aca devuelve la pos (x,y) 
+	// x0 (aca devuelve la pos (x,y))
 
 	mov x0, SCREEN_WIDTH				// ancho de la pantalla
 	mul x0, x0, x6					// y * 640
@@ -131,7 +131,6 @@ end_circulo:
 	ldur x30, [sp, #0]
 	add sp, sp, #8
 ret
-
 
 pintar_pixel:
 	// x5 -> x
