@@ -4,7 +4,8 @@
 
 	
 	.include "funciones.s"
-	
+	.include "logo_odc.s"
+
 	.globl main
 
 main:
