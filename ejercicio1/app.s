@@ -500,6 +500,417 @@ loop0:
 	movk x9, 0xA1FF	,lsl 0
 	bl fn_gotas
 	
+
+	//// Detalles de los bordes Pered & Suelo ////
+	// Detalle borde Pared - Color: #393280
+	mov x1, #680
+	mov x2, #10
+	mov x5, #0
+	mov x6, #120
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 515 HASTA LA 901 ES LA FORMACION DE LOS SALIENTES Y SOMBRAS DEL BORDE
+	// Salientes del borde 
+	mov x1, #8
+	mov x2, #3
+	mov x5, #0
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #40
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #80
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #120
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #160
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #200
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #240
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #280
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #320
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #360
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #400
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #440
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #480
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #520
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #560
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #3
+	mov x5, #600
+	mov x6, #117
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+	// Sombreadores - Color: #191541
+	// Sombras entre los salientes
+	mov x1, #32
+	mov x2, #2
+	mov x5, #8
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #48
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #88
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #128
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #168
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #208
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #248
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #288
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #328
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #368
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #408
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #448
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #488
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #528
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #568
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #32
+	mov x2, #2
+	mov x5, #608
+	mov x6, #118
+	movz x9, 0x19 , lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	// Sombras por encima de los salientes
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #0
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #40
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #80
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #120
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #160
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #200
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #240
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #280
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #320
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #360
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #400
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #440
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #480
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #520
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #560
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #600
+	mov x6, #115
+	movz x9, 0x19	, lsl 16
+	movk x9, 0x1541	, lsl 0
+	bl cuadrado
+
+	// Detalle borde Suelo - Color: #393280
+	mov x1, #680
+	mov x2, #10
+	mov x5, #0
+	mov x6, #360
+	movz x9, 0x39	, lsl 16
+	movk x9, 0x3280	, lsl 0
+	bl cuadrado
+
+
 	// Infinite Loop
 infloop:
 	b infloop
