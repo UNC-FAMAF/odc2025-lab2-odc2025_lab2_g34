@@ -1,8 +1,15 @@
 	.equ SCREEN_WIDTH, 640
 	.equ SCREEN_HEIGHT, 480
 	.equ BITS_PER_PIXEL, 32
+	.equ GOTA_W, 3 			// width 
+	.equ GOTA_H, 20			// height
+	.equ CANTIDAD_GOTAS, 4		// largo del array pos_gotas dividiod 2
 	
+	.data
+	pos_gotas: .word 62, 52, 110, 15, 240, 50, 220, 30 		// se agrupan de a dos, el primero para x segundo para y por ej 62, 52 es x=52, y=62 y asi
+									// despues se recorre el array haciendo indice * 8 osea lsl #3
 	
+	.text
 	// Dirección = Dirección de inicio + 4 * [x + (y * 640)]
 calcular_dir_pixel:
 	// x5 -> x
@@ -154,3 +161,41 @@ pintar_pixel:
 	ldur x30, [sp, #0]
 	add sp, sp, #32
 ret
+
+fn_gotas:
+	// basicamente un rectangulo pero con ancho y altura fija
+	// x -> x5
+	// y -> x6
+	
+	ldr x3, =pos_gotas			// x3 puntero al array pos_gotas
+	add x12, xzr, xzr			// indice i para el loop
+	
+	sub sp, sp, #16
+	stur x30, [sp, #0]
+	stur x3, [sp, #8]			// para no cambiar cuadrado
+	
+	
+	loop_gotas:
+		cmp x12, CANTIDAD_GOTAS
+		b.ge end_loop_gotas
+		
+		lsl x7, x12, #3			// i * 8 = inicio de siguiente elemento (si tomamos como 1 elemento a x e y) y seria con offset #32 
+		add x4, x3, x7			// direccion pos_gotas[i]
+		
+		ldur w5, [x4, #0]		
+		ldur w6, [x4, #4]		// offset 4 porq las direcciones "digamos" 0, 1, 2, 3 (osea 32bits) son para x y despues direccionws 4, 5, 6, 7 empezaria y 
+		
+		mov x1, GOTA_W
+		mov x2, GOTA_H
+		bl cuadrado
+		
+		ldur x3, [sp, #8]
+		
+		add x12, x12, #1
+		b loop_gotas
+	
+	end_loop_gotas:
+		ldur x30, [sp, #0]
+		add sp, sp, #16
+ret
+

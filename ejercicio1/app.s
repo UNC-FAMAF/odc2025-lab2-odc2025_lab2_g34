@@ -496,6 +496,10 @@ loop0:
 	
 	///// gotas /////
 	
+	movz x9, 0xA1	,lsl 16
+	movk x9, 0xA1FF	,lsl 0
+	bl fn_gotas
+	
 	// Infinite Loop
 infloop:
 	b infloop
