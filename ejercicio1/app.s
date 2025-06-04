@@ -36,15 +36,6 @@ loop0:
 	movk x9, 0x0000	, lsl 0
 	bl cuadrado
 
-	// Suelo - Color: #141A4A
-	mov x1, #SCREEN_WIDTH
-	mov x2, #120
-	mov x5, #240
-	mov x6, #240
-	movz x9, 0x14	, lsl 16
-	movk x9, 0x1A4A , lsl 0
-	bl cuadrado
-
 	// Pared - Color: #030324
 	mov x1, #SCREEN_WIDTH
 	mov x2, #120
@@ -52,6 +43,15 @@ loop0:
 	mov x6, #120
 	movz x9, 0x03	, lsl 16
 	movk x9, 0x0324 , lsl 0
+	bl cuadrado
+	
+	// Suelo - Color: #141A4A
+	mov x1, #SCREEN_WIDTH
+	mov x2, #124
+	mov x5, #0
+	mov x6, #240
+	movz x9, 0x14	, lsl 16
+	movk x9, 0x1A4A , lsl 0
 	bl cuadrado
 
 
@@ -511,8 +511,9 @@ loop0:
 	movk x9, 0x3280	, lsl 0
 	bl cuadrado
 
-	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 515 HASTA LA 901 ES LA FORMACION DE LOS SALIENTES Y SOMBRAS DEL BORDE
+	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 517 HASTA LA 2632 ES LA FORMACION DE LOS SALIENTES SOMBRAS Y CONTORNOS DEL BORDE DE LA PARED Y EL SUELO
 	// Salientes del borde 
+	
 	mov x1, #8
 	mov x2, #3
 	mov x5, #0
@@ -643,6 +644,7 @@ loop0:
 
 	// Sombreadores - Color: #191541
 	// Sombras entre los salientes
+	
 	mov x1, #32
 	mov x2, #2
 	mov x5, #8
@@ -772,7 +774,7 @@ loop0:
 	bl cuadrado
 
 	// Sombras por encima de los salientes
-
+	
 	mov x1, #8
 	mov x2, #2
 	mov x5, #0
@@ -901,6 +903,152 @@ loop0:
 	movk x9, 0x1541	, lsl 0
 	bl cuadrado
 
+	// Sombras por debajo de los salientes - Color: #1C1368
+
+	mov x1, #8
+    mov x2, #2
+    mov x5, #0
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #40
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #80
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #120
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #160
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #200
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #240
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #280
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #320
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #360
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #400
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #440
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #480
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #520
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #560
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #600
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #640
+    mov x6, #128
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
+	mov x1, #640
+    mov x2, #2
+    mov x5, #0
+    mov x6, #129
+    movz x9, 0x1C       , lsl 16
+    movk x9, 0x1368     , lsl 0
+    bl cuadrado
+
 	// Detalle borde Suelo - Color: #393280
 	mov x1, #680
 	mov x2, #10
@@ -910,6 +1058,1578 @@ loop0:
 	movk x9, 0x3280	, lsl 0
 	bl cuadrado
 
+	// Detalle borde Suelo Superior - Color: #141A4A
+	mov x1, #2
+    mov x2, #1
+    mov x5, #0
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #5
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #30
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #35
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #60
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #65
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #90
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #95
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #120
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #125
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #150
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #155
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #180
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #185
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #210
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #215
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #240
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #245
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #270
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #275
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #300
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #305
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #330
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #335
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #360
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #365
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #390
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #395
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #420
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #425
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #450
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #455
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #480
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #485
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #510
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #515
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #540
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #545
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #570
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #575
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #600
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #605
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #1
+    mov x5, #630
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #1
+    mov x5, #635
+    mov x6, #239
+    movz x9, 0x14 , lsl 16
+    movk x9, 0x1A4A , lsl 0
+    bl cuadrado
+
+	// Contorno superior del Borde del Suelo - Color: #000000
+
+	mov x1, #12
+	mov x2, #2
+	mov x5, #0
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #12
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #6
+	mov x2, #2
+	mov x5, #20
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #26
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #12
+	mov x2, #2
+	mov x5, #34
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #46
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #6
+	mov x2, #2
+	mov x5, #54
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #60
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #12
+	mov x2, #2
+	mov x5, #68
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #80
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #6
+	mov x2, #2
+	mov x5, #88
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #94
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #12
+	mov x2, #2
+	mov x5, #102
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #114
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #6
+	mov x2, #2
+	mov x5, #122
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #128
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #12
+	mov x2, #2
+	mov x5, #136
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #148
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #6
+	mov x2, #2
+	mov x5, #156
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #162
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #12
+	mov x2, #2
+	mov x5, #170
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #182
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #6
+	mov x2, #2
+	mov x5, #190
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #196
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #12
+	mov x2, #2
+	mov x5, #204
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #216
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #6
+	mov x2, #2
+	mov x5, #224
+	mov x6, #359
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #8
+	mov x2, #2
+	mov x5, #230
+	mov x6, #358
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x0000	, lsl 0
+	bl cuadrado
+
+	mov x1, #12
+    mov x2, #2
+    mov x5, #238
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #250
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #258
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #264
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #272
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #284
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #292
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #298
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #306
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #318
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #326
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #332
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #340
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #352
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #360
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #366
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #374
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #386
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #394
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #400
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #408
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #420
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #428
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #434
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #442
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #454
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #462
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #468
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #476
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #488
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #496
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #502
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+	mov x1, #12
+    mov x2, #2
+    mov x5, #510
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #522
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #530
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #536
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #544
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #556
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #564
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #570
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #578
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #590
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #598
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #604
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #612
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #624
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #632
+    mov x6, #359
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #638
+    mov x6, #358
+    movz x9, 0x00, lsl 16
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+	// Contorno inferior del Borde del Suelo - Color:  #1B1362
+
+	mov x1, #12
+    mov x2, #2
+    mov x5, #0
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #12
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #20
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #26
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #34
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #46
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #54
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #60
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #68
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #80
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #88
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #94
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #102
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #114
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #122
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #128
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #136
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #148
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #156
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #162
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #170
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #182
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #190
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #196
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #204
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #216
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #224
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #230
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #238
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #250
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #258
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #264
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #272
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #284
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #292
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #298
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #306
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #318
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #326
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #332
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #340
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #352
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #360
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #366
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #374
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #386
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #394
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #400
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #408
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #420
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #428
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #434
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #442
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #454
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #462
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #468
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #476
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #488
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #496
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #502
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #510
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #522
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #530
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #536
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #544
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #556
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #564
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #570
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #578
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #590
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #598
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #604
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #612
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #624
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #632
+    mov x6, #370
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #2
+    mov x5, #638
+    mov x6, #369
+    movz x9, 0x1B, lsl 16
+    movk x9, 0x1362, lsl 0
+    bl cuadrado
 
 	// Infinite Loop
 infloop:
