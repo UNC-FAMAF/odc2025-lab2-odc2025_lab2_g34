@@ -54,6 +54,8 @@ loop0:
 	movk x9, 0x0324 , lsl 0
 	bl cuadrado
 
+
+	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 59 HASTA LA 478 ES LA ELABORACION DE LOS CHARCOS DE AGUA
 	// Charcos de agua #1 - Color: #00000E (Abajo del personaje)
 	movz x9, 0x00	,lsl 16
 	movk x9, 0x000E	,lsl 0
@@ -62,7 +64,7 @@ loop0:
 	mov x6, #300					// y
 	bl circulo
 	
-	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 66 HASTA LA 236 ES LA FORMACIÓN DEL CHARCO #1 (es muy repetitivo) 
+	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 68 HASTA LA 245 ES LA FORMACIÓN DEL CHARCO #1 (es muy repetitivo) 
 	// Forma del charco
 	movz x9, 0x00	,lsl 16
 	movk x9, 0x000E	,lsl 0
@@ -237,9 +239,84 @@ loop0:
 	// Charcos de agua #2 - Color: #00000E (El primero a la derecha del personaje)
 	movz x9, 0x00	,lsl 16
 	movk x9, 0x000E	,lsl 0
-	mov x4, #30				// radio
+	mov x4, #20				// radio
 	mov x5, #480					// x
 	mov x6, #280					// y
+	bl circulo
+
+	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 248 HASTA LA 328 ES LA FORMACIÓN DEL CHARCO #2 (es muy repetitivo)
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #18				// radio
+	mov x5, #490					// x
+	mov x6, #280					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #18				// radio
+	mov x5, #470					// x
+	mov x6, #280					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #17				// radio
+	mov x5, #500					// x
+	mov x6, #280					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #17				// radio
+	mov x5, #460					// x
+	mov x6, #282					// y
+	bl circulo
+
+	// Forma del charco
+	mov x1, #40
+	mov x2, #20
+	mov x5, #475
+	mov x6, #261
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x000E	, lsl 0
+	bl cuadrado
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #15			// radio
+	mov x5, #510					// x
+	mov x6, #275					// y
+	bl circulo
+
+	// Forma del charco
+	mov x1, #50
+	mov x2, #20
+	mov x5, #430
+	mov x6, #280
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x000E	, lsl 0
+	bl cuadrado
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #13			// radio
+	mov x5, #430					// x
+	mov x6, #285					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #13			// radio
+	mov x5, #440					// x
+	mov x6, #285					// y
 	bl circulo
 
 	// Charcos de agua #3 - Color: #00000E (El segundo a la derecha del personaje)
@@ -248,6 +325,41 @@ loop0:
 	mov x4, #23				// radio
 	mov x5, #560					// x
 	mov x6, #325					// y
+	bl circulo
+
+	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 331 HASTA LA 379 ES LA FORMACIÓN DEL CHARCO #3 (es muy repetitivo)
+	// Forma del charco
+	mov x1, #70
+	mov x2, #27
+	mov x5, #550
+	mov x6, #320
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x000E	, lsl 0
+	bl cuadrado
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #15				// radio
+	mov x5, #609					// x
+	mov x6, #333					// y
+	bl circulo
+
+	// Forma del charco
+	mov x1, #60
+	mov x2, #27
+	mov x5, #550
+	mov x6, #310
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x000E	, lsl 0
+	bl cuadrado
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #12				// radio
+	mov x5, #610					// x
+	mov x6, #323					// y
 	bl circulo
 	
 	// Charcos de agua #4 - Color: #00000E (El tercero a la derecha del personaje)
@@ -258,7 +370,7 @@ loop0:
 	mov x6, #295					// y
 	bl circulo
 	
-	// Charcos de agua #3 - Color: #00000E (El pequeño a la izquierda del personaje)
+	// Charcos de agua #5 - Color: #00000E (El pequeño a la izquierda del personaje)
 	movz x9, 0x00	,lsl 16
 	movk x9, 0x000E	,lsl 0
 	mov x4, #10				// radio
@@ -266,6 +378,104 @@ loop0:
 	mov x6, #260					// y
 	bl circulo
 
+	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 382 HASTA LA 478 ES LA FORMACIÓN DEL CHARCO #5 (es muy repetitivo)
+	// Forma del charco
+	mov x1, #30
+	mov x2, #12
+	mov x5, #180
+	mov x6, #259
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x000E	, lsl 0
+	bl cuadrado
+
+	// Forma del charco
+	mov x1, #30
+	mov x2, #12
+	mov x5, #150
+	mov x6, #249
+	movz x9, 0x00	, lsl 16
+	movk x9, 0x000E	, lsl 0
+	bl cuadrado
+	
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #9				// radio
+	mov x5, #185					// x
+	mov x6, #260					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #9				// radio
+	mov x5, #175					// x
+	mov x6, #260					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #8				// radio
+	mov x5, #190					// x
+	mov x6, #260					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #9				// radio
+	mov x5, #170					// x
+	mov x6, #260					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #7				// radio
+	mov x5, #195					// x
+	mov x6, #260					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #8				// radio
+	mov x5, #165					// x
+	mov x6, #260					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #7				// radio
+	mov x5, #200					// x
+	mov x6, #260					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #7				// radio
+	mov x5, #160					// x
+	mov x6, #260					// y
+	bl circulo
+	
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #7				// radio
+	mov x5, #210					// x
+	mov x6, #264					// y
+	bl circulo
+
+	// Forma del charco
+	movz x9, 0x00	,lsl 16
+	movk x9, 0x000E	,lsl 0
+	mov x4, #7				// radio
+	mov x5, #150					// x
+	mov x6, #256					// y
+	bl circulo
 
 	////// luna //////
 	
