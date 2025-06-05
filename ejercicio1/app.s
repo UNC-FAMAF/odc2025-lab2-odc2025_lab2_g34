@@ -2,6 +2,8 @@
 	.equ SCREEN_HEIGH, 		480
 	.equ BITS_PER_PIXEL,  	32
 
+    .include "logo_odc.s"
+
 	
 	.globl main
 
@@ -2617,6 +2619,8 @@ main:
 
 	bl dibujar_frisk
 
+    // logo de OdC 2025
+    bl dibujar_logo_odc
 
 	// Infinite Loop
 infloop:
