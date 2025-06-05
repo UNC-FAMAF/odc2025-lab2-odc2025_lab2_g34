@@ -1,4 +1,10 @@
-    //// Frisk ////
+
+	.global dibujar_frisk
+
+	//// Frisk ////
+
+
+dibujar_frisk:
     // Pelo - Color: #3D120E
     mov x1, #20
     mov x2, #2
@@ -629,3 +635,6 @@
     movz x9, 0x32, lsl 16
     movk x9, 0x100D, lsl 0
     bl cuadrado
+
+ret
+
