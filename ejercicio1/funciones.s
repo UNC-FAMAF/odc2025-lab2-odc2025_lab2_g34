@@ -8,12 +8,12 @@
 	.equ BITS_PER_PIXEL, 32
 	.equ GOTA_W, 3 			// width 
 	.equ GOTA_H, 20			// height
-	.equ CANTIDAD_GOTAS, 4		// largo del array pos_gotas dividiod 2
+	.equ CANTIDAD_GOTAS, 34		// largo del array pos_gotas dividiod 2
 	
 	// se agrupan de a dos, el primero para x segundo para y por ej 62, 52 es x=52, y=62 y asi
 	// despues se recorre el array haciendo indice * 8 osea lsl #3
 	.data
-	pos_gotas: .word 62, 52, 110, 15, 240, 50, 220, 30	
+	pos_gotas: .word 110,15, 220,30, 240,50, 62,52, 302,21, 380,27, 156,37, 130,93, 206,105, 295,105, 29,151, 83,147, 147,157, 112,210, 53,220, 180,177, 229,143, 346,76, 423,56, 400,110, 374,166, 257,199, 213,235, 460,141, 478,16, 544,45, 603,9, 585,95, 526,187, 483,220, 414,232, 560,206, 610,166, 601,244 
 	
 	.text
 	// Dirección = Dirección de inicio + 4 * [x + (y * 640)]
