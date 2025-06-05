@@ -1,3 +1,8 @@
+	.global calcular_dir_pixel
+	.global cuadrado
+	.global circulo
+	.global fn_gotas
+	
 	.equ SCREEN_WIDTH, 640
 	.equ SCREEN_HEIGHT, 480
 	.equ BITS_PER_PIXEL, 32
@@ -5,9 +10,10 @@
 	.equ GOTA_H, 20			// height
 	.equ CANTIDAD_GOTAS, 4		// largo del array pos_gotas dividiod 2
 	
+	// se agrupan de a dos, el primero para x segundo para y por ej 62, 52 es x=52, y=62 y asi
+	// despues se recorre el array haciendo indice * 8 osea lsl #3
 	.data
-	pos_gotas: .word 62, 52, 110, 15, 240, 50, 220, 30 		// se agrupan de a dos, el primero para x segundo para y por ej 62, 52 es x=52, y=62 y asi
-									// despues se recorre el array haciendo indice * 8 osea lsl #3
+	pos_gotas: .word 62, 52, 110, 15, 240, 50, 220, 30	
 	
 	.text
 	// Dirección = Dirección de inicio + 4 * [x + (y * 640)]
