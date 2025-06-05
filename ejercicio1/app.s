@@ -267,6 +267,9 @@ loop0:
 	mov x6, #260					// y
 	bl circulo
 
+   // logo OdC 2025
+   bl dibujar_logo_odc
+
 	// Infinite Loop
 infloop:
 	b infloop
