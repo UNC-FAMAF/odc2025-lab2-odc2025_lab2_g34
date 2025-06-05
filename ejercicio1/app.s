@@ -476,14 +476,6 @@ main:
 	mov x5, #550					// x
 	mov x6, #65					// y
 	bl circulo
-	
-	
-	///// gotas /////
-	
-	movz x9, 0xA1	,lsl 16
-	movk x9, 0xA1FF	,lsl 0
-	bl fn_gotas
-	
 
 	//// Detalles de los bordes Pered & Suelo ////
 	// Detalle borde Pared - Color: #393280
@@ -2614,6 +2606,12 @@ main:
     movz x9, 0x1B, lsl 16
     movk x9, 0x1362, lsl 0
     bl cuadrado
+		
+		///// gotas /////
+	
+	movz x9, 0xA1	,lsl 16
+	movk x9, 0xA1FF	,lsl 0
+	bl fn_gotas
 	
 		//// Frisk ////
 
