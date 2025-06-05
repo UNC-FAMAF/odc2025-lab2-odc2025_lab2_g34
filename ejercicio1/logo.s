@@ -1,4 +1,4 @@
-// logo_odc.s - dibuja el texto "OdC 2025" usando bloques de 5x5 con la funcion cuadrado
+// logo_odc.s - dibuja el texto "OdC 2025", usando bloques de 5x5 con la funcion cuadrado
 
 .globl dibujar_logo_odc
 
