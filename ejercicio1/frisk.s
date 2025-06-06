@@ -5,6 +5,10 @@
 
 
 dibujar_frisk:
+
+    sub sp, sp, #8
+	stur x30, [sp, #0]
+
     // Pelo - Color: #3D120E
     mov x1, #20
     mov x2, #2
@@ -636,5 +640,338 @@ dibujar_frisk:
     movk x9, 0x100D, lsl 0
     bl cuadrado
 
+    //// Reflejo de Frisk ////
+
+    mov x1, #6
+    mov x2, #8
+    mov x5, #316
+    mov x6, #283
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #314
+    mov x6, #283
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #10
+    mov x2, #2
+    mov x5, #326
+    mov x6, #283
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #8
+    mov x5, #326
+    mov x6, #283
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #10
+    mov x2, #2
+    mov x5, #312
+    mov x6, #291
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #12
+    mov x2, #2
+    mov x5, #326
+    mov x6, #291
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #16
+    mov x5, #312
+    mov x6, #291
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #4
+    mov x5, #320
+    mov x6, #293
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #4
+    mov x5, #326
+    mov x6, #293
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #14
+    mov x5, #336
+    mov x6, #293
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #320
+    mov x6, #295
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #8
+    mov x5, #314
+    mov x6, #293
+    movz x9, 0x34, lsl 16
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #8
+    mov x5, #328
+    mov x6, #293
+    movz x9, 0x34, lsl 16
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #4
+    mov x5, #320
+    mov x6, #297
+    movz x9, 0x34, lsl 16
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #22
+    mov x2, #2
+    mov x5, #314
+    mov x6, #301
+    movz x9, 0x37, lsl 16
+    movk x9, 0x1E57, lsl 0
+    bl cuadrado
+
+    mov x1, #22
+    mov x2, #2
+    mov x5, #314
+    mov x6, #303
+    movz x9, 0x34, lsl 16
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #4
+    mov x2, #2
+    mov x5, #308    
+    mov x6, #297
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #4
+    mov x2, #2
+    mov x5, #338
+    mov x6, #297
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #20
+    mov x2, #2
+    mov x5, #314
+    mov x6, #305
+    movz x9, 0x37, lsl 16
+    movk x9, 0x1E57, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #334
+    mov x6, #305
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #338
+    mov x6, #299
+    movz x9, 0x68, lsl 16
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #8
+    mov x5, #340
+    mov x6, #299
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #338
+    mov x6, #301
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #4
+    mov x5, #338
+    mov x6, #303
+    movz x9, 0x34, lsl 16
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #338
+    mov x6, #307
+    movz x9, 0x14, lsl 16
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #310
+    mov x6, #307
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #310
+    mov x6, #301
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #8
+    mov x5, #308
+    mov x6, #299
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #310
+    mov x6, #299
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #4
+    mov x5, #310
+    mov x6, #303
+    movz x9, 0x34, lsl 16  
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+    
+    mov x1, #2
+    mov x2, #2
+    mov x5, #312
+    mov x6, #307
+    movz x9, 0x34, lsl 16  
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #314
+    mov x6, #307
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #18
+    mov x2, #2
+    mov x5, #316
+    mov x6, #307
+    movz x9, 0x34, lsl 16  
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #334
+    mov x6, #307
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #336
+    mov x6, #307
+    movz x9, 0x34, lsl 16  
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #312
+    mov x6, #309
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #318
+    mov x6, #309
+    movz x9, 0x34, lsl 16  
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #10
+    mov x2, #2
+    mov x5, #320
+    mov x6, #309
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #332
+    mov x6, #309
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #330
+    mov x6, #309
+    movz x9, 0x34, lsl 16  
+    movk x9, 0x3D58, lsl 0
+    bl cuadrado
+
+    mov x1, #16
+    mov x2, #2
+    mov x5, #318
+    mov x6, #311
+    movz x9, 0x14, lsl 16  
+    movk x9, 0x0605, lsl 0
+    bl cuadrado
+
+
+    ldur x30, [sp, #0]
+	add sp, sp, #8
 ret
 

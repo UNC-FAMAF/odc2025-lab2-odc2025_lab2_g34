@@ -2,9 +2,6 @@
 	.equ SCREEN_HEIGH, 		480
 	.equ BITS_PER_PIXEL,  	32
 
-    .include "logo_odc.s"
-
-	
 	.globl main
 
 main:
@@ -2609,15 +2606,16 @@ main:
 		
 		///// gotas /////
 	
-	movz x9, 0xA1	,lsl 16
-	movk x9, 0xA1FF	,lsl 0
+	movz x9, 0x96	,lsl 16
+	movk x9, 0x99B5	,lsl 0
 	bl fn_gotas
 	
 		//// Frisk ////
 
 	bl dibujar_frisk
 
-    // logo de OdC 2025
+        // logo de OdC 2025
+    
     bl dibujar_logo_odc
 
 	// Infinite Loop
