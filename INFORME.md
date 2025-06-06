@@ -1,8 +1,8 @@
 Nombre y apellido 
 Integrante 1: Jürgen Kiefer Arndt
-Integrante 2:
-Integrante 3:
-Integrante 4:
+Integrante 2: Lucas Miguel Guaiquil
+Integrante 3: Mateo Brasesco
+Integrante 4: Marcos Sassoli
 
 
 Descripción ejercicio 1: 

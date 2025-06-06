@@ -34,8 +34,6 @@ fondo:
 	movk x9, 0x1A4A , lsl 0
 	bl cuadrado
 
-
-	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 59 HASTA LA 478 ES LA ELABORACION DE LOS CHARCOS DE AGUA
 	// Charcos de agua #1 - Color: #00000E (Abajo del personaje)
 	movz x9, 0x00	,lsl 16
 	movk x9, 0x000E	,lsl 0
@@ -43,8 +41,7 @@ fondo:
 	mov x5, #320					// x
 	mov x6, #300					// y
 	bl circulo
-	
-	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 68 HASTA LA 245 ES LA FORMACIÓN DEL CHARCO #1 (es muy repetitivo) 
+	 
 	// Forma del charco
 	movz x9, 0x00	,lsl 16
 	movk x9, 0x000E	,lsl 0
@@ -224,7 +221,7 @@ fondo:
 	mov x6, #280					// y
 	bl circulo
 
-	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 248 HASTA LA 328 ES LA FORMACIÓN DEL CHARCO #2 (es muy repetitivo)
+
 	// Forma del charco
 	movz x9, 0x00	,lsl 16
 	movk x9, 0x000E	,lsl 0
@@ -307,7 +304,6 @@ fondo:
 	mov x6, #325					// y
 	bl circulo
 
-	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 331 HASTA LA 379 ES LA FORMACIÓN DEL CHARCO #3 (es muy repetitivo)
 	// Forma del charco
 	mov x1, #70
 	mov x2, #27
@@ -358,7 +354,6 @@ fondo:
 	mov x6, #260					// y
 	bl circulo
 
-	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 382 HASTA LA 478 ES LA FORMACIÓN DEL CHARCO #5 (es muy repetitivo)
 	// Forma del charco
 	mov x1, #30
 	mov x2, #12
@@ -483,7 +478,6 @@ fondo:
 	movk x9, 0x3280	, lsl 0
 	bl cuadrado
 
-	// ⚠️⚠️⚠️ DE LA LINEA DE CODIGO 517 HASTA LA 2632 ES LA FORMACION DE LOS SALIENTES SOMBRAS Y CONTORNOS DEL BORDE DE LA PARED Y EL SUELO
 	// Salientes del borde 
 	
 	mov x1, #8
