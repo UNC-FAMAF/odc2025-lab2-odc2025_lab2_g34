@@ -1,15 +1,14 @@
 
 	.global dibujar_frisk
 
-	//// Frisk ////
-
 
 dibujar_frisk:
 
     sub sp, sp, #8
 	stur x30, [sp, #0]
 
-    // Pelo - Color: #3D120E
+    //// Frisk ////
+    // Cabeza - Color: #3D120E (Pelo) - Color: #FFC90E (Cara/Piel) - Color #000000 (Ojos) 
     mov x1, #20
     mov x2, #2
     mov x5, #315
@@ -178,7 +177,8 @@ dibujar_frisk:
     movk x9, 0x120E, lsl 0
     bl cuadrado
 
-    // Cara - Color: #FFC90E
+
+    // Cara
 
     mov x1, #4
     mov x2, #28
@@ -293,7 +293,8 @@ dibujar_frisk:
     bl cuadrado
 
 
-    // Ojos - Color: #000000
+    // Ojos
+
     mov x1, #4
     mov x2, #2
     mov x5, #320
@@ -319,7 +320,6 @@ dibujar_frisk:
     bl cuadrado
 
     // Cuerpo - Color: #32100D (Contorno) - Color: #67A4E0 (Ropa Azul) - Color: #E200E2 (Ropa Rosa)
-
     mov x1, #16
     mov x2, #2
     mov x5, #318
@@ -387,7 +387,7 @@ dibujar_frisk:
     mov x1, #2
     mov x2, #2
     mov x5, #338
-    mov x6, #259  /////////
+    mov x6, #259
     movz x9, 0x32, lsl 16
     movk x9, 0x100D, lsl 0
     bl cuadrado
@@ -641,7 +641,7 @@ dibujar_frisk:
     bl cuadrado
 
     //// Reflejo de Frisk ////
-
+    // Cuerpo - Color: #140605 (Contorno) - Color: #343D58 (Ropa Azul) - Color: #371E57 (Ropa Rosa)
     mov x1, #6
     mov x2, #8
     mov x5, #316
@@ -970,7 +970,216 @@ dibujar_frisk:
     movk x9, 0x0605, lsl 0
     bl cuadrado
 
+    // Cabeza - Color: #150701 (Pelo) - Color: #684D10 (Cara/Piel) - Color: #000000 (Ojos)
 
+    mov x1, #10
+    mov x2, #26
+    mov x5, #320
+    mov x6, #313
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #9
+    mov x2, #27
+    mov x5, #320
+    mov x6, #313
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #44
+    mov x2, #10
+    mov x5, #303
+    mov x6, #319
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #40
+    mov x2, #10
+    mov x5, #305
+    mov x6, #328
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #4
+    mov x2, #21
+    mov x5, #323
+    mov x6, #313
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #3
+    mov x5, #325
+    mov x6, #333
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #25
+    mov x2, #1
+    mov x5, #308
+    mov x6, #338
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #9
+    mov x2, #1
+    mov x5, #311
+    mov x6, #339
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #3
+    mov x2, #5
+    mov x5, #343
+    mov x6, #315
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #4
+    mov x2, #10
+    mov x5, #336
+    mov x6, #312
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #8
+    mov x2, #4
+    mov x5, #328
+    mov x6, #316
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #6
+    mov x5, #305
+    mov x6, #316
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #6
+    mov x5, #315
+    mov x6, #316
+    movz x9, 0x15, lsl 16  
+    movk x9, 0x0701, lsl 0
+    bl cuadrado
+
+    mov x1, #7
+    mov x2, #12
+    mov x5, #322
+    mov x6, #320
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #7
+    mov x2, #4
+    mov x5, #316
+    mov x6, #322
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #21
+    mov x2, #8
+    mov x5, #312
+    mov x6, #324
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+    
+    mov x1, #4
+    mov x2, #6
+    mov x5, #333
+    mov x6, #326
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #3
+    mov x5, #337
+    mov x6, #327
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #4
+    mov x5, #339
+    mov x6, #328
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #332
+    mov x6, #332
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #6
+    mov x2, #2
+    mov x5, #312
+    mov x6, #332
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #2
+    mov x5, #314
+    mov x6, #334
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+
+    mov x1, #2
+    mov x2, #4
+    mov x5, #310
+    mov x6, #326
+    movz x9, 0x68, lsl 16  
+    movk x9, 0x4D10, lsl 0
+    bl cuadrado
+    
+    mov x1, #4
+    mov x2, #2
+    mov x5, #314
+    mov x6, #329
+    movz x9, 0x00, lsl 16  
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #4
+    mov x2, #2
+    mov x5, #326
+    mov x6, #329
+    movz x9, 0x00, lsl 16  
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+
+    mov x1, #4
+    mov x2, #2
+    mov x5, #320
+    mov x6, #325
+    movz x9, 0x00, lsl 16  
+    movk x9, 0x0000, lsl 0
+    bl cuadrado
+    
     ldur x30, [sp, #0]
 	add sp, sp, #8
 ret

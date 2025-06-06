@@ -6,8 +6,8 @@
 	.equ SCREEN_WIDTH, 640
 	.equ SCREEN_HEIGHT, 480
 	.equ BITS_PER_PIXEL, 32
-	.equ GOTA_W, 3 			// width 
-	.equ GOTA_H, 15			// height
+	.equ GOTA_W, 2 			// width 
+	.equ GOTA_H, 13			// height
 	.equ CANTIDAD_GOTAS, 34		// largo del array pos_gotas dividiod 2
 	
 	// se agrupan de a dos, el primero para x segundo para y por ej 62, 52 es x=52, y=62 y asi
